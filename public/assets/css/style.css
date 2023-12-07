@@ -178,24 +178,21 @@ button[data-actor-number]:where(:hover, :focus, .active) {
 .slider .actor dd :where(ul, ol, dl) {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 2rem;
+  padding-left: .5ch;
 }
 
 .slider .actor dd :where(ul, ol) li {
-  list-style-type: none;
-  list-style-position: outside;
   margin-left: 0;
+  padding-left: 1ch;
 }
 
-.slider .actor dd :where(ul, ol) li:before {
-  margin-left: -2rem;
+.slider .actor dd :where(ul, ol) li::marker {
   content: '\25A0';
   color: #a4b89c;
   display: inline-block;
-  margin-right: 2rem;
   line-height: 1;
 }
-.slider .actor dd :where(ul, ol) li :where(ul, ol) li:before {
+.slider .actor dd :where(ul, ol) li :where(ul, ol) li::marker {
   content: '\25C6';
 }
 
